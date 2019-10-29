@@ -103,6 +103,19 @@ $warning: #ff8d72 !default;
 $danger: #fd5d93 !default;
 $black: #222a42 !default;
 $yuri: #96181e !default;
+$grey-btn: #9b9999;
+
+// Three dot
+$dotWidth: 10px;
+$dotHeight: 10px;
+$dotRadius: $dotWidth/2;
+
+$dotColor: #9880ff;
+$dotBgColor: $dotColor;
+$dotBeforeColor: $dotColor;
+$dotAfterColor: $dotColor;
+
+$dotSpacing: $dotWidth + $dotWidth/2;
 
 // gradient
 $default-states: #263148 !default;

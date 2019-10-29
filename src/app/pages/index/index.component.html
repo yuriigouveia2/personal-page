@@ -50,54 +50,30 @@
         </div>
       </div>
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#home"> Home </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about"> About me </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects"> Projects </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#social"> Social Media </a>
-        </li>
-        <!-- <li class="nav-item p-0">
-          <a
-            class="nav-link"
-            href="https://github.com/yuriigouveia2"
-            placement="bottom"
-            target="_blank"
-            tooltip="Siga-me no Github"
-          >
-            <i class="fab fa-github"> </i>
-            <p class="d-lg-none d-xl-none">Github</p>
-          </a>
-        </li>
-        <li class="nav-item p-0">
-          <a
-            class="nav-link"
-            href="https://www.linkedin.com/in/yuriigouveia"
-            placement="bottom"
-            target="_blank"
-            tooltip="Siga-me no Linkedin"
-          >
-            <i class="fab fa-linkedin"> </i>
-            <p class="d-lg-none d-xl-none">Linkedin</p>
-          </a>
-        </li>
-        <li class="nav-item p-0">
-          <a
-            class="nav-link"
-            href="https://www.instagram.com/yuriigouveia"
-            placement="bottom"
-            target="_blank"
-            tooltip="Siga-me no Instagram"
-          >
-            <i class="fab fa-instagram"> </i>
-            <p class="d-lg-none d-xl-none">Instagram</p>
-          </a>
-        </li> -->
+          <button 
+                type="button" 
+                class="btn btn-link btn-navbar" 
+                (click)="scrollToElement(home)"
+                aria-pressed="true"> Home
+          </button>
+          <button 
+                type="button" 
+                class="btn btn-link btn-navbar" 
+                (click)="scrollToElement(about)"
+                aria-pressed="true"> About me
+          </button>
+          <button 
+                type="button" 
+                class="btn btn-link btn-navbar" 
+                (click)="scrollToElement(projects)"
+                aria-pressed="true"> Projects
+          </button>
+          <button 
+                type="button" 
+                class="btn btn-link btn-navbar" 
+                (click)="scrollToElement(social)"
+                aria-pressed="true"> Social Media
+          </button>
       </ul>
     </div>
   </div>
@@ -111,7 +87,7 @@
     <div class="squares square5"></div>
     <div class="squares square6"></div>
     <div class="squares square7"></div>
-    <div class="container" id="home">
+    <div class="container" #home>
       <div class="content-center brand">
         <img src="../../../assets/img/yuri_vetor.png">
       </div>
@@ -120,54 +96,57 @@
   <div class="main">
     <div class="section section-navbars">
       <img class="path" src="assets/img/path3.png" />
+      <div class="section section-pagination">
+        <img class="path" src="assets/img/path4.png" />
 
-    <div class="section section-pagination">
-      <img class="path" src="assets/img/path4.png" />
+        <h1 class="center">
+          <p class="dot-elastic">TESTE</p>
+        </h1>
 
-      <img class="path path1" src="assets/img/path5.png" />
+        <img class="path path1" src="assets/img/path5.png" />
+      </div>
+      <div class="section section-typo">
+        <img class="path" src="assets/img/path1.png" />
+
+        <img class="path path1" src="assets/img/path3.png" />
+      </div>
+      <div class="section section-javascript" id="javascriptComponents">
+        <img class="path" src="assets/img/path5.png" />
+
+        <img class="path path1" src="assets/img/path5.png" />
+      </div>
     </div>
-    <div class="section section-typo">
-      <img class="path" src="assets/img/path1.png" />
-
-      <img class="path path1" src="assets/img/path3.png" />
-    </div>
-    <div class="section section-javascript" id="javascriptComponents">
-      <img class="path" src="assets/img/path5.png" />
-
-      <img class="path path1" src="assets/img/path5.png" />
-    </div>
-  </div>
-  <footer class="footer">
-    <div class="container" id="social">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="title">Follow me:</h3>
-          <div class="btn-wrapper profile">
-            <a
-              class="btn btn-icon btn-neutral btn-simple mr-2"
-              href="https://github.com/yuriigouveia2"
-              target="_blank"
-            >
-              <i class="fab fa-github"> </i>
-            </a>
-            <a
-              class="btn btn-icon btn-neutral btn-simple mr-1"
-              href="https://www.linkedin.com/in/yuriigouveia"
-              target="_blank"
-            >
-              <i class="fab fa-linkedin"> </i>
-            </a>
-            <a
-              class="btn btn-icon btn-neutral btn-simple"
-              href="https://instagram.com/yuriigouveia"
-              target="_blank"
-            >
-              <i class="fab fa-instagram"> </i>
-            </a>
+    <footer class="footer">
+      <div class="container" #social>
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="title">Follow me:</h3>
+            <div class="btn-wrapper profile">
+              <a
+                class="btn btn-icon btn-neutral btn-simple mr-2"
+                href="https://github.com/yuriigouveia2"
+                target="_blank"
+              >
+                <i class="fab fa-github"> </i>
+              </a>
+              <a
+                class="btn btn-icon btn-neutral btn-simple mr-1"
+                href="https://www.linkedin.com/in/yuriigouveia"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin"> </i>
+              </a>
+              <a
+                class="btn btn-icon btn-neutral btn-simple"
+                href="https://instagram.com/yuriigouveia"
+                target="_blank"
+              >
+                <i class="fab fa-instagram"> </i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
   </div>
 </div>

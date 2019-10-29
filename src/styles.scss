@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~three-dots/sass/three-dots.scss';
+
+.center{
+    text-align: center !important;
+}
+
+.dot-windmill.center {
+    position: relative !important;
+}
