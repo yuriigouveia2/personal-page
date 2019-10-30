@@ -7,6 +7,7 @@
     <div class="navbar-translate">
       <a
         class="navbar-brand"
+        style="color: white;"
         placement="bottom"
         [routerLink]="['/home']"
       >
@@ -93,15 +94,20 @@
       </div>
     </div>
   </div>
-  <div class="main">
+  <div class="main" #about>
     <div class="section section-navbars">
+
       <img class="path" src="assets/img/path3.png" />
+
       <div class="section section-pagination">
         <img class="path" src="assets/img/path4.png" />
 
-        <h1 class="center">
-          <p class="dot-elastic">TESTE</p>
-        </h1>
+        <div class="center">
+          <h1 class="inline">Page in progress</h1>
+        </div>
+        <div class="center">
+          <h1 class="dot-elastic"></h1>
+        </div>
 
         <img class="path path1" src="assets/img/path5.png" />
       </div>
@@ -116,11 +122,11 @@
         <img class="path path1" src="assets/img/path5.png" />
       </div>
     </div>
-    <footer class="footer">
+    <footer class="footer center">
       <div class="container" #social>
         <div class="row">
           <div class="col-md-12">
-            <h3 class="title">Follow me:</h3>
+            <h3>Follow me:</h3>
             <div class="btn-wrapper profile">
               <a
                 class="btn btn-icon btn-neutral btn-simple mr-2"

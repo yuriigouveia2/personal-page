@@ -1,9 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~three-dots/sass/three-dots.scss';
 
-.dot-windmill{
+$color-white: #ffffff;
+$dotColor: #96181e;
+$dotBgColor: $dotColor;
+$dotBeforeColor: $dotColor;
+$dotAfterColor: $dotColor;
+
+.dot-elastic{
+    margin: 0 auto;
     &.center {
-    position: relative !important;
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -11,6 +19,20 @@
     width: 100%;
     text-align: center;
     .dot-elastic {
+        margin: 0 auto;
+        background-color: $dotColor;
+        color: $dotColor;
+    }
+    .dot-elastic::before {
+        background-color: $dotColor;
+        color: $dotColor;
+    }
+    .dot-elastic::after {
+        background-color: $dotColor;
+        color: $dotColor;
+    }
+
+    .footer {
         margin: 0 auto;
     }
 }
