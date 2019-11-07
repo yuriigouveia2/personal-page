@@ -3,4 +3,4 @@
 # personal-page
 This is a static web page project for my personal portfolio. Still in progress.
 
-Click here ([http://d3r1df6s4qxfyl.cloudfront.net/index.html#/home]) to access it.
+Click [here](http://d3r1df6s4qxfyl.cloudfront.net/index.html#/home) to access it.
