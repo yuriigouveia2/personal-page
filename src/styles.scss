@@ -36,3 +36,16 @@ $dotAfterColor: $dotColor;
         margin: 0 auto;
     }
 }
+
+.container {
+    .row {
+        display: inline-block;
+        margin: auto;
+    }
+
+    .contact {
+        font-size: x-large;
+        color: $color-white;
+        margin: 45px;
+    }
+}
