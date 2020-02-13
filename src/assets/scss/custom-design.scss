@@ -1,0 +1,11 @@
+@media screen and (max-width: 991px) {
+    .navbar .navbar-collapse .navbar-collapse-header {
+        .collapse-brand.custom-collapse {
+            position: absolute !important;
+        }
+
+        .collapse-close .navbar-toggler {
+            padding: 0em 13em !important;
+        }
+    }
+}
