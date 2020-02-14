@@ -1,0 +1,25 @@
+@media screen and (max-width: 991px) {
+    .navbar .navbar-collapse .navbar-collapse-header {
+        .collapse-brand.custom-collapse {
+            position: absolute !important;
+        }
+
+        .collapse-close .navbar-toggler {
+            padding: 0em 13em !important;
+        }
+    }
+}
+
+.text-reveal {
+    font-size: 3.0625rem;
+}
+
+.text-about {
+    max-width: 50%;
+    margin: 0em 20em;
+    text-align: justify;
+}
+
+.main {
+    padding-top: 88px;
+}

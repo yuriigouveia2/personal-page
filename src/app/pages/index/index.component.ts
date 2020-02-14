@@ -1,9 +1,9 @@
-import { Component, OnInit, OnDestroy } from "@angular/core";
-import noUiSlider from "nouislider";
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import noUiSlider from 'nouislider';
 
 @Component({
-  selector: "app-index",
-  templateUrl: "index.component.html",
+  selector: 'app-index',
+  templateUrl: 'index.component.html',
 })
 export class IndexComponent implements OnInit, OnDestroy {
   isCollapsed = true;
@@ -14,12 +14,12 @@ export class IndexComponent implements OnInit, OnDestroy {
   pagination = 3;
   pagination1 = 1;
   constructor() {}
-  
-  ngOnInit() {
-    var body = document.getElementsByTagName("body")[0];
-    body.classList.add("index-page");
 
-    var slider = document.getElementById("sliderRegular");
+  ngOnInit() {
+    const body = document.getElementsByTagName('body')[0];
+    body.classList.add('index-page');
+
+    const slider = document.getElementById('sliderRegular');
 
     noUiSlider.create(slider, {
       start: 40,
@@ -30,7 +30,7 @@ export class IndexComponent implements OnInit, OnDestroy {
       }
     });
 
-    var slider2 = document.getElementById("sliderDouble");
+    const slider2 = document.getElementById('sliderDouble');
 
     noUiSlider.create(slider2, {
       start: [20, 60],
@@ -42,13 +42,12 @@ export class IndexComponent implements OnInit, OnDestroy {
     });
   }
   ngOnDestroy() {
-    var body = document.getElementsByTagName("body")[0];
-    body.classList.remove("index-page");
+    const body = document.getElementsByTagName('body')[0];
+    body.classList.remove('index-page');
   }
 
   scrollToElement(element): void {
-    console.log(element);
-    element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
   }
 
   inProgressAnimation() {
