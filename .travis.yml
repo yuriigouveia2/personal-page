@@ -1,4 +1,10 @@
 language: generic
+
+before_deploy: 
+  - pip install awscli
+  - export PATH=$PATH:$HOME/.local/bin
+  - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY aws s3 rm s3://$BUCKET --recursive --region=$REGION
+
 deploy:
   provider: s3
   access_key_id: "$AWS_ACCESS_KEY_ID"
