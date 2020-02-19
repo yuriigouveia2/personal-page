@@ -1,11 +1,15 @@
-language: python
-python:
-  - "3.6"
+language: generic
 
-before_deploy: 
-  - pip install awscli
-  - export PATH=$PATH:$HOME/.local/bin
-  - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY aws s3 rm s3://$BUCKET --recursive --region=$REGION
+before_deploy:
+  image: python:latest
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none
+  script:
+    - pip install awscli
+    - aws s3 rm s3://${BUCKET} --recursive
+  environment:
+    action: stop
 
 deploy:
   provider: s3
