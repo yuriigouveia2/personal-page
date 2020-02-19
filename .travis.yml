@@ -1,26 +1,11 @@
-language: python
-python:
-  - "3.6"
-
-# before_deploy:
-#   script:
-#     - pip install awscli
-#     - aws s3 rm s3://${BUCKET} --recursive
-
-# deploy:
-#   provider: s3
-#   access_key_id: "$AWS_ACCESS_KEY_ID"
-#   secret_access_key: "$AWS_SECRET_ACCESS_KEY"
-#   bucket: "$BUCKET"
-#   skip_cleanup: true
-#   local_dir: dist/portfolio
-# branches:
-#   only:
-#     - master
-before_deploy: pip install --user awscli
+language: generic
 deploy:
-  provider: script
-  script: ~/.local/bin/aws s3 sync dist s3://$BUCKET --region=$REGION --delete      
+  provider: s3
+  access_key_id: "$AWS_ACCESS_KEY_ID"
+  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
+  bucket: "$BUCKET"
   skip_cleanup: true
-  on:
-    branch: master
+  local_dir: dist/portfolio
+branches:
+  only:
+    - master
