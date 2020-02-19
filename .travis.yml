@@ -2,14 +2,9 @@ language: generic
 
 before_deploy:
   image: python:latest
-  stage: deploy
-  variables:
-    GIT_STRATEGY: none
   script:
     - pip install awscli
     - aws s3 rm s3://${BUCKET} --recursive
-  environment:
-    action: stop
 
 deploy:
   provider: s3
