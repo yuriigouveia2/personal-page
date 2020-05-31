@@ -4,6 +4,7 @@ import noUiSlider from 'nouislider';
 @Component({
   selector: 'app-index',
   templateUrl: 'index.component.html',
+  styleUrls: ['./index.component.scss']
 })
 export class IndexComponent implements OnInit, OnDestroy {
   isCollapsed = true;
