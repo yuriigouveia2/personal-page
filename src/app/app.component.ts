@@ -3,39 +3,41 @@ import {
   OnInit,
   Renderer,
   HostListener,
-  Inject
-} from "@angular/core";
-import { Location } from "@angular/common";
-import { DOCUMENT } from "@angular/common";
+  Inject,
+  Renderer2
+} from '@angular/core';
+import { Location } from '@angular/common';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
   constructor(
-    private renderer: Renderer,
+    private renderer: Renderer2,
     public location: Location,
     @Inject(DOCUMENT) document
   ) {}
-  @HostListener("window:scroll", ["$event"])
+  @HostListener('window:scroll', ['$event'])
   onWindowScroll(e) {
     if (window.pageYOffset > 100) {
-      var element = document.getElementById("navbar-top");
+      const element = document.getElementById('navbar-top');
       if (element) {
-        element.classList.remove("navbar-transparent");
-        element.classList.add("bg-yuri");
+        element.classList.remove('navbar-transparent');
+        element.classList.add('bg-yuri');
       }
     } else {
-      var element = document.getElementById("navbar-top");
+      const element = document.getElementById('navbar-top');
       if (element) {
-        element.classList.add("navbar-transparent");
-        element.classList.remove("bg-yuri");
+        element.classList.add('navbar-transparent');
+        element.classList.remove('bg-yuri');
       }
     }
   }
   ngOnInit() {
+    // tslint:disable-next-line: deprecation
     this.onWindowScroll(event);
   }
 }
